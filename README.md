@@ -1,2 +1,2 @@
-# Boosted-Feature-Guided-Refinement-Network-for-Single-Shot-Detection
+# Enriched-Feature-Guided-Refinement-Network-for-Single-Shot-Detection
 ICCV accepted
