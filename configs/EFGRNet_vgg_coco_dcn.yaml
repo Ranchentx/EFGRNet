@@ -1,0 +1,52 @@
+MODEL:
+  TYPE: refine_vgg
+  SIZE: '300'
+  REFINE: True
+#  CONV_BODY: efrgnet_vgg_reduce.refine_vgg
+  CONV_BODY: efrgnet_vgg.refine_vgg
+  NUM_CLASSES: 81
+  LOAD_PRETRAINED_WEIGHTS: False
+  PRETRAIN_WEIGHTS: './weights/vgg16_reducedfc.pth'
+
+
+SMALL:
+  FEATURE_MAPS: [[40, 40], [20, 20], [10, 10], [5, 5]]
+  ARM_CHANNELS: [512, 1024, 256, 256]
+  ODM_CHANNELS: [256, 256, 256, 256]
+  NUM_ANCHORS: [3, 3, 3, 3]
+  STEPS: [[8, 8], [16, 16], [32, 32], [64, 64]]
+  MIN_SIZES: [30, 64, 128, 256]
+  MAX_SIZES: [64, 128, 256, 315]
+  ASPECT_RATIOS : [[2, 0.5], [2, 0.5], [2, 0.5], [2, 0.5]]
+  VARIANCE : [0.1, 0.2]
+  CLIP: True
+  IMG_WH: [320, 320]
+  INPUT_FIXED: True # if you want to input different size, you need to set this False.
+  USE_MAX_SIZE: False
+
+
+DATASETS:
+  TRAIN_TYPE: [['2014', 'train'], ['2014', 'valminusminival']]
+  VAL_TYPE: [['2014', 'minival']]
+  DATAROOT: '/media/jnie/Storage/ubuntu/DataSets/coco/'
+  DATA_TYPE: 'COCO'
+  SETS:
+    VOC: [['2007', 'trainval'], ['2012', 'trainval']]
+    VOC0712PLUS: [['2007', 'trainval'], ['2012', 'trainval'],['2007', 'test']]
+    VOC0712: [['2012', '2012_trainval']]
+    COCO: [['2014', 'train'], ['2014', 'valminusminival']]
+    VOC2007: [['2007', 'test']]
+    COCOval: [['2014', 'minival']]
+    VOCROOT: 'raid/jing/data/VOCdevkit/'
+    COCOROOT: 'data/coco'
+  
+TEST:
+  INPUT_WH: [320, 320]
+  CONFIDENCE_THRESH: 0.01
+  NMS_OVERLAP: 0.45
+  BATCH_SIZE: 1
+  
+
+
+
+
