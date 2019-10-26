@@ -3,6 +3,7 @@ cd ./utils/
 
 CUDA_PATH=/usr/local/cuda/
 
+
 python build.py build_ext --inplace
 # if you use anaconda3 maybe you need add this
 # change code like https://github.com/rbgirshick/py-faster-rcnn/issues/706

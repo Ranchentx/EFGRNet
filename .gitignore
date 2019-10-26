@@ -2,3 +2,5 @@
 .idea/
 *.so
 /eval/
+/utils/nms/cpu_nms.so
+/utils/nms/gpu_nms.so
