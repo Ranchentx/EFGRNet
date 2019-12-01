@@ -8,6 +8,15 @@ MODEL:
   LOAD_PRETRAINED_WEIGHTS: False
   PRETRAIN_WEIGHTS: './weights/vgg16_reducedfc.pth'
 
+TRAIN:
+  OVERLAP: 0.5
+  BGR_MEAN: [104, 117, 123]
+  BATCH_SIZE: 32
+  OHEM: True
+  NEG_RATIO: 3
+  WARMUP: True
+  WARMUP_EPOCH: 5
+  TRAIN_ON: True
 
 SMALL:
   FEATURE_MAPS: [[40, 40], [20, 20], [10, 10], [5, 5]]
@@ -24,6 +33,16 @@ SMALL:
   INPUT_FIXED: True # if you want to input different size, you need to set this False.
   USE_MAX_SIZE: False
 
+SOLVER:
+  WEIGHT_DECAY: 0.0005
+  BASE_LR: 0.002
+  GAMMA: 0.1
+  MOMENTUM: 0.9
+#  EPOCH_STEPS: [0, 90, 120, 140]
+  LR: [0.004, 0.002, 0.0004, 0.00004, 0.000004]
+  EPOCH_STEPS: [90, 110, 130, 150, 160]
+  END_EPOCH: 160
+  START_EPOCH: 0
 
 DATASETS:
   TRAIN_TYPE: [['2014', 'train'], ['2014', 'valminusminival']]

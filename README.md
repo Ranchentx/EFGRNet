@@ -92,13 +92,19 @@ To evaluate the performance reported in the paper, Pascal VOC and COCO dataset a
           `-- cache
   ~~~
 
+## Training
 
+
+
+```Shell
+python train_coco.py --cfg ./configs/EFGRNet_vgg_coco_dcn.yaml
+```
 
 
 ## Testing
 
 - Note:
-  All testing configs are in EFGRNet_vgg_voc_dcn.yaml, you can change it by yourself.
+  All testing configs are in EFGRNet_vgg_coco_dcn.yaml, you can change it by yourself.
 
 - To evaluate a trained network:
 
