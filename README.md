@@ -114,10 +114,8 @@ python eval_dcn.py --cfg ./configs/EFGRNet_vgg_coco_dcn.yaml --weights ./eval_we
 
 ## Models
 
-<!-- * 07+12 [EFGRNet_VGG320](https://drive.google.com/open?id=1apPyT3IkNwKhwuYyp432IJrTd0QHGbIN), [BaiduYun Driver](https://pan.baidu.com/s/1xOp3_FDk49YlJ-6C-xQfHw) -->
 * COCO [EFGRNet_VGG320](https://drive.google.com/open?id=1-_x9e4kX3ZJBKzfTKloslJxK2qO8bfkO); [BaiduYun Driver](https://pan.baidu.com/s/1ZPiibo-PnoTJl5HjAl63Pg&shfl=sharepset)
 * COCO [EFGRNet_VGG512](https://drive.google.com/open?id=1OVRiYRAyJiErUYsOXPaE12XEXtAV4ZrD); [BaiduYun Driver](https://pan.baidu.com/s/1YvXhhIXdziDV9q3wj9mLRg&shfl=sharepset)
-<!-- * COCO [EFGRNet_ResNet101_512](https://drive.google.com/open?id=1vmbTWWgeMN_qKVWOeDfl1EN9c7yHPmOe), [BaiduYun Driver](https://pan.baidu.com/s/1bp4ik1L)  -->
 
 
 ## Citation
